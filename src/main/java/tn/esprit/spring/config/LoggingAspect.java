@@ -26,14 +26,14 @@ public class LoggingAspect {
 	public void logMethodExit2(JoinPoint joinPoint) {
 		String name = joinPoint.getSignature().getName();
 		log.error("Out of method with erros : " + name );
-	}
+	}*/
 
-	@After("execution(* tn.esprit.spring.service.*.*(..))")
+	@After("execution(* tn.esprit.spring.service.*.addOrderAndAffectToActionAndPortfeuille(..))")
 	public void logMethodExit(JoinPoint joinPoint) {
 		String name = joinPoint.getSignature().getName();
-		log.info("Out of method : " + name );
+		log.info("L ordre en train d etre traite ");
 	}
-
+/*
 	@Around("execution(* tn.esprit.spring.service.*.*(..))")
 	public void profile(ProceedingJoinPoint pjp) throws Throwable {
 		long start = System.currentTimeMillis();

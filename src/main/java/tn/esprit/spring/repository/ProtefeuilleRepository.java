@@ -4,4 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import tn.esprit.spring.entities.Protefeuille;
 
 public interface ProtefeuilleRepository extends JpaRepository<Protefeuille,Integer> {
+    Protefeuille findProtefeuilleByReference(Integer reference);
 }
